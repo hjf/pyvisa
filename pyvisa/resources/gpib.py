@@ -202,6 +202,9 @@ class GPIBInterface(_GPIBMixin, MessageBasedResource):
         attributes.AttrVI_ATTR_GPIB_NDAC_STATE()
     )
 
+    #: Current state of the GPIB SRQ (Service Request) interface line.
+    srq_state: Attribute[constants.LineState] = attributes.AttrVI_ATTR_GPIB_SRQ_STATE()
+
     #: Is the GPIB interface currently addressed to talk or listen, or is not addressed.
     address_state: Attribute[constants.LineState] = (
         attributes.AttrVI_ATTR_GPIB_ADDR_STATE()
